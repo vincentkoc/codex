@@ -69,6 +69,8 @@ pub(crate) fn discover_handlers(config_layer_stack: Option<&ConfigLayerStack>) -
             post_tool_use,
             pre_compact,
             post_compact,
+            pre_model_request,
+            post_model_response,
             session_start,
             user_prompt_submit,
             stop,
@@ -94,6 +96,14 @@ pub(crate) fn discover_handlers(config_layer_stack: Option<&ConfigLayerStack>) -
             (
                 codex_protocol::protocol::HookEventName::PostCompact,
                 post_compact,
+            ),
+            (
+                codex_protocol::protocol::HookEventName::PreModelRequest,
+                pre_model_request,
+            ),
+            (
+                codex_protocol::protocol::HookEventName::PostModelResponse,
+                post_model_response,
             ),
             (
                 codex_protocol::protocol::HookEventName::SessionStart,

@@ -18,6 +18,10 @@ pub(crate) struct HookEvents {
     pub pre_compact: Vec<MatcherGroup>,
     #[serde(rename = "PostCompact", default)]
     pub post_compact: Vec<MatcherGroup>,
+    #[serde(rename = "PreModelRequest", default)]
+    pub pre_model_request: Vec<MatcherGroup>,
+    #[serde(rename = "PostModelResponse", default)]
+    pub post_model_response: Vec<MatcherGroup>,
     #[serde(rename = "SessionStart", default)]
     pub session_start: Vec<MatcherGroup>,
     #[serde(rename = "UserPromptSubmit", default)]

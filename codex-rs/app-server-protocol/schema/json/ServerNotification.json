@@ -1749,6 +1749,8 @@
         "postToolUse",
         "preCompact",
         "postCompact",
+        "preModelRequest",
+        "postModelResponse",
         "sessionStart",
         "userPromptSubmit",
         "stop"
